@@ -22,13 +22,16 @@
   border: none;
   border-radius: 5px;
   background-color: #3b82f6;
-  color: white;
+  color: rgb(245, 243, 243);
+  font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .search-bar button:hover {
-  background-color: #2563eb;
+  font-weight:bold;
+  color:silver;
+  background-color: #031a4d;
 }
 
 body {
@@ -40,15 +43,18 @@ body {
 .movie-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 20px;
+  gap: 40px;
   padding: 40px;
 }
 
 .movie-card {
-  background-color: #1e293b;
+  position: relative;
+  width:210px;
+  background-color: #01050c;
   border-radius: 10px;
   overflow: hidden;
   text-align: center;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: white;
   transition: transform 0.3s;
 }
@@ -133,3 +139,32 @@ body {
   color: #38bdf8; /* light cyan */
   transform: scale(1.03);
 }
+
+.favorite-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.favorite-icon:hover {
+  transform: scale(1.2);
+}
+
+.home-button {
+  display: inline-block;
+  background-color: #38bdf8;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #0ea5e9;
+}
+

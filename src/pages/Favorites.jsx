@@ -1,11 +1,26 @@
-// src/pages/Favorites.jsx
+import { useEffect, useState } from "react";
+import MovieCard from "../components/MovieCard";
 
 export default function Favorites() {
-  // Later, we’ll connect this with Context to show saved movies
+  const [favorites, setFavorites] = useState([]);
+
+  useEffect(() => {
+    const savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    setFavorites(savedFavorites);
+  }, []);
+
   return (
-    <div style={{ color: "white", textAlign: "center", marginTop: "50px" }}>
-      <h1>⭐ Your Favorite Movies</h1>
-      <p>No favorite movies yet — start adding some!</p>
+    <div className="favorites-container">
+      <h1>❤️ Your Favorite Movies</h1>
+      {favorites.length > 0 ? (
+        <div className="movie-grid">
+          {favorites.map((movie) => (
+            <MovieCard key={movie.id} movie={movie} />
+          ))}
+        </div>
+      ) : (
+        <p>No favorite movies yet 😢</p>
+      )}
     </div>
   );
 }
