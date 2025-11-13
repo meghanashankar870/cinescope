@@ -29,7 +29,7 @@ export default function MovieCard({ movie }) {
   const posterUrl = 
     movie.poster_path && movie.poster_path !== ""
         ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
-        : "https://via.placeholder.com/300x450?text=No+Image"; // fallback image This ensures your UI never breaks — even when API data is incomplete.
+        : "https://dummyimage.com/300x450/1e293b/ffffff.png&text=No+Image" // fallback image This ensures your UI never breaks — even when API data is incomplete.
 
   return (
     <motion.div //special div from framer motion

@@ -42,6 +42,7 @@ export default function Home() {
         {/*This makes your search bar dynamic — React automatically re-renders the page with new results.*/}
         <input
           type="text"
+          name="search"
           value={query} //shows watever is stored in the query state
           placeholder="Search for a movie..."
           onChange={(e) => setQuery(e.target.value)}//onchange --updates the query state 
