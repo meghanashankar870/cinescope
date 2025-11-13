@@ -8,7 +8,7 @@ export default function MovieCard({ movie }) {
   // Load favorites from localStorage
   useEffect(() => {
     const savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
-    setIsFavorite(savedFavorites.some((fav) => fav.id === movie.id));
+    setIsFavorite(savedFavorites.some((fav) => fav.id === movie.id));//.some() checks if at least one item in the array matches the condition.
   }, [movie.id]);
 
   const toggleFavorite = () => {

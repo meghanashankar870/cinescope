@@ -11,6 +11,7 @@ export default function Home() {
   const [query, setQuery] = useState("Avengers"); // default search
   const [loading, setLoading] = useState(false); //tells the UI when data is being fetched [loading]
   // Fetch movies whenever query changes
+  //inline fetch
   useEffect(() => { //runs after the component first renders
     fetchMovies();//it calls the function to load some initial movies
   }, []); //runs only once on page load
